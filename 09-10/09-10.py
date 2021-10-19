@@ -1,14 +1,10 @@
-
-  
-def time(num: int):
-    days = num // (60 * 60 * 24)
-    num %= 60 * 60 * 24
-    hours = num // (60 * 60)
-    num %= 60 * 60
-    minutes = num // 60
-    num %= 60
-    seconds = num
-    return f'{days}:{hours}:{minutes}:{seconds}'
-
-
-print(time(86400))
+import datetime
+d=int(input("Введите день"))
+m=int(input("Введите месяц"))
+y=int(input("Введите год"))
+try:
+    data=datetime.date(y,m,d)
+    print(data)
+    print("Дата существующая")
+except:
+    print("Такой даты нет")
